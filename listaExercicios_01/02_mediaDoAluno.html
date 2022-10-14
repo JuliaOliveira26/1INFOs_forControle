@@ -7,18 +7,19 @@
     */
 
     //ENTRADA
-    const quantidadeNotas = Number(prompt(" Quantas notas o aluno obteve?"));
-    let notaFinal = [];
-    let Média = (contador/quantidadeNotas);
-        for(contador = 1; contador <=quantidadeNotas;contador++){
-           document.write(`A média é : ${Média}`);
+    const quantidadeNotas = parseInt(prompt(" Quantas notas o aluno obteve?"));
+    let notaFinal = 0;
+    
+        for(contador = 1; contador <= quantidadeNotas; contador++){
+           let notas = Number(prompt(`Qual a nota ${contador} ?`));
+           notaFinal = notaFinal + notas;
     }
 
-
+    const Média = (notaFinal/quantidadeNotas);
     //PROCESSAMENTO
     
 
-
+    document.write(`A média do aluno é de ${Média.toFixed(2)}`)
     //SAÍDA
 
 </script>
