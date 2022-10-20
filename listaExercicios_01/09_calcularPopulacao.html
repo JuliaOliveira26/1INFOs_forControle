@@ -6,11 +6,25 @@
     */
 
     //ENTRADA
+    let população = 50000;
+    const taxaCrescimento = 1.5;
+    let população5Anos = 0;
+    let população10Anos = 0;
 
 
     //PROCESSAMENTO
-
+    for( let anos= 0; anos <= 10;anos++){
+        população = população + (população*taxaCrescimento/100);
+        if (anos === 5){
+            população5Anos = população;
+        }
+        if(anos === 10){
+            população10Anos = população;
+        }
+    }
 
     //SAÍDA
+    document.write(`População em cinco anos : ${população5Anos}` +"</br>");
+    document.write(`População em dez anos : ${população10Anos}`)
 
 </script>

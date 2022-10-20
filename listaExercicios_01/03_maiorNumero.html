@@ -7,11 +7,22 @@
     */
 
     //ENTRADA
+    alert("Informe 5 números");
+    let numero = []
+    let maiorNumero = 0;
+    
 
 
     //PROCESSAMENTO
-
+    for(let Contador = 0; Contador< 5; Contador++) {
+        let perguntas = Number(prompt(`Insira número ${Contador + 1}`));
+        numero.push(perguntas);
+        if(numero[Contador]> maiorNumero){
+            maiorNumero = perguntas;
+        }
+    }
 
     //SAÍDA
+    document.write( ` O maior número é ${maiorNumero}`);
 
 </script>
